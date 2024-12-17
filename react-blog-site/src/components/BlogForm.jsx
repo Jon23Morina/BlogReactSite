@@ -1,7 +1,10 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function BlogForm({ blogs, setBlogs }) {
+  const navigate = useNavigate();
+
   const blogObject = {
     title: "",
     description: "",
@@ -29,15 +32,18 @@ function BlogForm({ blogs, setBlogs }) {
       blogValue.userId = "";
       var newBlogArray = [...blogs, blogValue];
       setBlogs(newBlogArray);
+      setBlogValue(blogObject);
+      navigate("/");
     }
   }
 
   return (
-    <div className="p-5 my-4">
+    <div className="p-5 my-4 w-full bg-teal-500">
       <form onSubmit={handleSubmitEvent}>
         <div>
           <div className="p-5 m-4">
             <input
+              className="w-40"
               type="text"
               placeholder="Title..."
               onChange={(e) => {
@@ -56,6 +62,7 @@ function BlogForm({ blogs, setBlogs }) {
           </div>
           <div className="p-5 m-4">
             <textarea
+              className="w-72 h-72"
               name=""
               id=""
               placeholder="Description..."
@@ -66,6 +73,7 @@ function BlogForm({ blogs, setBlogs }) {
           </div>
           <div className="p-5 m-4">
             <textarea
+              className="w-96 h-96"
               name=""
               id=""
               placeholder="Paragraph..."
