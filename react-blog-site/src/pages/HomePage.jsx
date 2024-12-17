@@ -1,9 +1,10 @@
 import React from "react";
+import BlogList from "../components/BlogList";
 
-function HomePage() {
+function HomePage({ blogs }) {
   return (
     <div>
-      <h2>Home Page</h2>
+      <BlogList blogs={blogs} />
     </div>
   );
 }
