@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <div className="mb-3 sticky flex justify-between items-center shadow-lg bg-transparent">
+    <div className="sticky flex justify-between items-center shadow-lg bg-transparent">
       <div className="flex justify-center items-center">
         <div className=" bg-slate-800 text-white p-3 px-8 font-medium text-center tracking-wider text-lg">
           <h4>
@@ -19,6 +19,9 @@ function Nav() {
             </li>
             <li className="px-2">
               <Link to="/about">About</Link>
+            </li>
+            <li className="px-2">
+              <Link to="/discover">Discover</Link>
             </li>
             <li className="px-2">
               <Link to="/blog-create">Create Blog</Link>
