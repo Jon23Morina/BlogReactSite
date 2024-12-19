@@ -24,7 +24,7 @@ function Nav() {
               <Link to="/discover">Discover</Link>
             </li>
             <li className="px-2">
-              <Link to="/blog-create">Create Blog</Link>
+              <Link to="/blog-create">Control Panel</Link>
             </li>
           </ul>
         </div>

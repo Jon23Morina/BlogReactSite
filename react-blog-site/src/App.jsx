@@ -7,8 +7,8 @@ import Discover from "./pages/Discover";
 
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import BlogForm from "./components/BlogForm";
 import Blog from "./components/Blog";
+import Control from "./pages/Control";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
@@ -21,7 +21,7 @@ function App() {
           <Route path="/about" element={<AboutUs></AboutUs>} />
           <Route
             path="/blog-create"
-            element={<BlogForm blogs={blogs} setBlogs={setBlogs}></BlogForm>}
+            element={<Control blogs={blogs} setBlogs={setBlogs}></Control>}
           />
           <Route path="/discover" element={<Discover></Discover>} />
           <Route path="/blog/:title" element={<Blog blog={blogs}></Blog>} />
