@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <div className="sticky flex justify-between items-center shadow-lg bg-transparent">
+    <div className="sticky flex justify-between items-center bg-white shadow-lg top-0 w-full z-50">
       <div className="flex justify-center items-center">
         <div className=" bg-slate-800 text-white p-3 px-8 font-medium text-center tracking-wider text-lg">
           <h4>

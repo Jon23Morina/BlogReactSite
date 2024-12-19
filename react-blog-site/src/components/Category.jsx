@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
-function Category() {
+function Category(categories, setCategories) {
   const [categoryValue, setCategoryValue] = useState("");
 
   function onCategorySubmit() {
     if (categoryValue == "") {
       setCategoryValue("");
     } else {
+      let newarray = [{ ...categories, categoryValue }];
+      setCategories(newarray);
     }
   }
   return (
@@ -36,7 +38,10 @@ function Category() {
                   type="text"
                   id="category"
                   placeholder="Name..."
-                  className="w-[620px] p-2 shadow-lg border-b-blue-600 border-[2px] rounded-sm focus:outline-none duration-300 hover:duration-300"
+                  className="w-[620px] p-2 shadow-lg border-b-blue-600 border-[2px] rounded-sm focus:outline-none duration-300 hover:duration-300 focus:border-[3px]"
+                  onChange={(e) => {
+                    setCategoryValue(e.target.value);
+                  }}
                 />
               </div>
             </div>

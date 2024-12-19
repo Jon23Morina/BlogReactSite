@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 
 function ControlSide({ dispatch, setCheck }) {
   return (
-    <div className="relative">
+    <div className="relative h-full">
       <div className="p-2 mb-2">
         <h4 className="text-2xl">Control Panel</h4>
         <hr />
@@ -30,6 +30,8 @@ function ControlSide({ dispatch, setCheck }) {
         </li>
         <li className="mb-2">Gallery</li>
       </ul>
+      <br />
+      <br />
       <button
         className="bg-pink-800 text-white tracking-wider p-2 rounded-sm text-lg m-2 absolute bottom-0"
         onClick={() => {

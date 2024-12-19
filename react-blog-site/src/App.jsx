@@ -15,7 +15,7 @@ function App() {
   const [blogs, setBlogs] = useState([]);
   const [categories, setCategories] = useState([]);
   return (
-    <>
+    <div className="relative app">
       <BrowserRouter>
         <Nav></Nav>
         <Routes>
@@ -38,7 +38,7 @@ function App() {
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

@@ -14,7 +14,7 @@ function BlogForm({ blogs, setBlogs, categories }) {
     file: null,
     userId: null,
     user: null,
-    category: "",
+    category: categories,
   };
   //file: URL.createObjectURL(e.target.files[0])
   const [blogValue, setBlogValue] = useState(blogObject);
@@ -60,7 +60,7 @@ function BlogForm({ blogs, setBlogs, categories }) {
                   Title
                 </label>
                 <input
-                  className="w-[480px] p-2 shadow-lg border-b-blue-600 border-[2px] rounded-sm focus:outline-none duration-300 hover:duration-300"
+                  className="w-[480px] p-2 shadow-lg border-b-blue-600 border-[2px] rounded-sm focus:outline-none duration-300 hover:duration-300 focus:border-[3px]"
                   type="text"
                   id="title"
                   placeholder="Title..."
@@ -77,7 +77,7 @@ function BlogForm({ blogs, setBlogs, categories }) {
                   Quote
                 </label>
                 <input
-                  className="w-[480px] p-2 shadow-lg rounded-sm border-b-blue-600 border-[2px] focus:outline-none duration-300 hover:duration-300"
+                  className="w-[480px] p-2 shadow-lg rounded-sm border-b-blue-600 border-[2px] focus:outline-none duration-300 hover:duration-300 focus:border-[3px]"
                   type="text"
                   id="quote"
                   placeholder="Quote..."
@@ -104,7 +104,7 @@ function BlogForm({ blogs, setBlogs, categories }) {
                 Upload Image
               </label>
               <input
-                className="bg-white w-full cursor-pointer shadow-lg p-2 rounded-sm border-b-blue-600 border-[2px] focus:outline-none duration-300 hover:duration-300"
+                className="bg-white w-full cursor-pointer shadow-lg p-2 rounded-sm border-b-blue-600 border-[2px] focus:outline-none duration-300 hover:duration-300 focus:border-[3px]"
                 type="file"
                 id="image"
                 placeholder="Insert Image"
@@ -124,7 +124,7 @@ function BlogForm({ blogs, setBlogs, categories }) {
                 Description
               </label>
               <textarea
-                className="w-full h-[220px] p-2 shadow-lg rounded-md border-b-blue-600 border-[2px] focus:outline-none duration-300 hover:duration-300"
+                className="w-full h-[220px] p-2 shadow-lg rounded-md border-b-blue-600 border-[2px] focus:outline-none duration-300 hover:duration-300 focus:border-[3px]"
                 name=""
                 id="description"
                 placeholder="Description..."
@@ -141,7 +141,7 @@ function BlogForm({ blogs, setBlogs, categories }) {
                 Paragraph
               </label>
               <textarea
-                className="w-full h-[680px] p-2 shadow-lg rounded-sm focus:outline-none focus:rounded-md duration-300 hover:duration-300 border-b-blue-600 border-[2px]"
+                className="w-full h-[680px] p-2 shadow-lg rounded-sm focus:outline-none focus:rounded-md duration-300 hover:duration-300 border-b-blue-600 border-[2px] focus:border-[3px]"
                 name=""
                 id="paragraph"
                 placeholder="Paragraph..."

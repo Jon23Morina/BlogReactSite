@@ -51,7 +51,10 @@ function Control({ blogs, setBlogs, categories, setCategories }) {
             categories={categories}
           ></BlogForm>
         ) : (
-          <Category></Category>
+          <Category
+            categories={categories}
+            setCategories={setCategories}
+          ></Category>
         )}
       </div>
     </div>
