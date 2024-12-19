@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Category from "./Category";
 
-function BlogForm({ blogs, setBlogs }) {
+function BlogForm({ blogs, setBlogs, categories }) {
   const navigate = useNavigate();
 
   const blogObject = {
@@ -13,6 +14,7 @@ function BlogForm({ blogs, setBlogs }) {
     file: null,
     userId: null,
     user: null,
+    category: "",
   };
   //file: URL.createObjectURL(e.target.files[0])
   const [blogValue, setBlogValue] = useState(blogObject);
@@ -40,7 +42,9 @@ function BlogForm({ blogs, setBlogs }) {
   return (
     <div className="p-5">
       <div className="z-20">
-        <h2 className=" text-3xl text-slate-800">Create Blog</h2>
+        <h2 className="text-2xl tracking-widest font-semibold text-slate-800">
+          Create Blog
+        </h2>
         <p className=" text-base p-3 text-slate-500">
           This part of the section is where you create Blogs. Add your wildest
           and inspiring adventures, Show the world interesting facts about life!
@@ -82,6 +86,15 @@ function BlogForm({ blogs, setBlogs }) {
                   }}
                 />
               </div>
+            </div>
+            <div className="p-5 m-4">
+              <label
+                htmlFor="category"
+                className="blocktext-lg p-1 tracking-wide text-slate-700"
+              >
+                category
+              </label>
+              <input type="radio" />
             </div>
             <div className="p-5 m-4">
               <label
